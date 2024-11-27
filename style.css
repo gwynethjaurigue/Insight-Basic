@@ -369,6 +369,21 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rg
 .projects .projects__card:hover .projects__text{
   display:block;
 }
+@media screen and (max-width:500px){
+  .projects .projects__wrapper{
+    display:grid;
+    grid-template-columns:100%;
+    grid-gap:5rem;
+  }
+  .projects .projects__card::before{
+    content:'';
+    width:0%;
+    height:0%;
+  }
+  .projects .projects__text{
+    display:block;
+  }
+}
 /* REPEATABLE PATTERNS */
   :root {
     --primary: #fb4d3d;
@@ -397,3 +412,45 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rg
   border:1px solid var(--light);
 }
 
+/* FOOTER */
+footer{
+  background:var(--dark);
+opacity:100%;
+padding:1rem;
+}
+
+footer .footer__wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-bottom:0.5rem;
+}
+footer .footer__social{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  gap:3.5rem;
+  padding-top:7px;
+}
+
+footer .footer__social i{
+  color:var(--light);
+}
+footer .footer__wrapper p{
+  color:var(--light);
+}
+@media screen and (max-width:500px){
+  footer .footer__wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+    padding-top:2rem 0;
+  }
+  footer .footer__wrapper img{
+    display:flex;
+    order:-1;
+  }
+  footer .footer__social{
+    gap:3.5rem;
+  }
+}
